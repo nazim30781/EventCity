@@ -1,0 +1,12 @@
+.hidden {
+	display: none;
+}
+
+.city-input {
+	width: 200px !important;
+}
+
+img {
+	min-height: 50px;
+	min-width: 50px;
+}

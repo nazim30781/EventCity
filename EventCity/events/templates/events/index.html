@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="{% static 'style.css' %}" />
+	</head>
+	<body>
+		<div class="head">
+			<div class="logo">
+				<h1>Event City</h1>
+			</div>
+
+			<div class="profile">
+				<img src="{{profile.logo.url}}" alt="" class="profile-logo mr-top" />
+				<h4>{{profile}}</h4>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="content">
+				<!-- <aside>
+					<form action="{% url 'filterEvents' %}" method="get">
+						<ul>
+							{% for i in view.get_categorys %}
+							<li>
+								<input type="checkbox" value="{{i.pk}}" name="category" />
+								<label for="input">{{i.title}}</label>
+							</li>
+							{% endfor %}
+						</ul>
+						<button type="submit">Filter</button>
+					</form>
+				</aside> -->
+				<main>
+					<div class="event-list">
+						{% for i in events %}
+						<div class="event-item">
+							<div class="event-item_header">
+								<div class="title">{{i}}</div>
+								<div class="date">{{i.date}}</div>
+								<div class="creater">
+									{% if i.creater.logo %}
+									<img
+										src="{{i.creater.logo.url}}"
+										alt=""
+										class="profile-logo"
+									/>
+									{% endif %}
+									<h4>{{i.creater}}</h4>
+								</div>
+							</div>
+
+							<div class="event-item_content">
+								<div class="description">{{i.description}}</div>
+								{% if i.logo %}
+								<img src="{{i.logo.url}}" />
+								{% endif %}
+								<button class="join-button" onclick='add("{{i.pk}}")'>
+									Присоедениться
+								</button>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</main>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			function add(pk) {
+				console.log(pk)
+				$.ajax({
+					method: 'POST',
+					data: {
+						pk: pk,
+					}, // получаяем данные формы
+					url: "{% url 'add_user_to_event' %}",
+				})
+			}
+		</script>
+	</body>
+</html>

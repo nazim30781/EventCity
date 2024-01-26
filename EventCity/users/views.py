@@ -4,6 +4,7 @@ from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
 from django.contrib.auth import logout, login
 from .forms import RegisterUserForm, LoginUserForm
+from .service import *
 
 
 class RegisterUser(CreateView):
@@ -16,6 +17,7 @@ class RegisterUser(CreateView):
     
     def form_valid(self, form):
         user = form.save()
+        create_profile(user, form.cleaned_data['city'])
         login(self.request, user)
         return redirect(self.redirect_url)
 

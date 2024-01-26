@@ -1,0 +1,169 @@
+.content {
+	display: flex;
+
+	margin-top: 50px;
+	padding: 0 5%;
+}
+
+.wrapper {
+	padding: 0 2%;
+}
+
+.profile-logo {
+	height: 50px !important;
+	width: 50px !important;
+
+	border-radius: 100px;
+}
+
+.mr-top {
+	margin-top: 15%;
+}
+
+.profile {
+	display: flex;
+	justify-content: space-between;
+
+	width: 120px;
+
+	font-size: 20px;
+	margin-right: 3%;
+}
+
+.profile h4 {
+	height: 100%;
+	text-align: center;
+	margin: 25% 0;
+}
+
+.flex {
+	display: flex;
+}
+
+.logo {
+	margin-top: 1%;
+	margin-left: 3%;
+}
+
+.head {
+	height: 100px;
+	background-color: bisque;
+	padding: 0 20px;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+body {
+	margin: 0;
+	background-color: rgb(250, 244, 219);
+}
+
+ul {
+	padding: 0;
+}
+
+aside {
+	width: 35%;
+	padding: 0 !important;
+}
+
+main {
+	width: 90%;
+	margin: auto;
+}
+
+li {
+	list-style: none;
+}
+
+.event-list {
+	width: 100%;
+}
+
+.event-item {
+	width: 100%;
+	height: 65%;
+
+	background-color: rgb(247, 225, 141);
+	border-radius: 20px;
+
+	margin: auto;
+	margin-top: 40px;
+}
+
+.event-item_header {
+	height: 6%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.title {
+	font-size: 24px;
+	font-weight: bold;
+
+	padding: 3%;
+}
+
+.date {
+	font-size: 16px;
+	font-weight: bold;
+	width: 50%;
+	text-align: center;
+
+	padding: 3% 2%;
+}
+
+.creater {
+	display: flex;
+	width: 28%;
+	padding-right: 3%;
+}
+
+.creater h4 {
+	margin: 0;
+	padding: 15% 0;
+	margin-left: 7%;
+}
+
+.creater img {
+	margin: 6.5% 0;
+}
+
+.event-item_content {
+	padding: 3.5%;
+}
+
+.event-item_content img {
+	width: 70% !important;
+	height: 50% !important;
+
+	margin-left: 15%;
+	margin-bottom: 5%;
+}
+
+.event-item_content .description {
+	margin: 3%;
+	font-size: 20px;
+	font-weight: 500;
+	font-style: italic;
+	text-align: center;
+}
+
+.event-item_content button {
+	margin-top: 3%;
+
+	height: 20px;
+	width: 140px;
+
+	border: none !important;
+	border-radius: 10px;
+
+	background-color: #fbfad7;
+}
+
+.event-item_content button:hover {
+	background-color: #faf8ca;
+	height: 23px;
+	width: 145px;
+}

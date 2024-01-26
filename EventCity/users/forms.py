@@ -9,6 +9,7 @@ class RegisterUserForm(UserCreationForm):
     username = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter username'}))
     password1 = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Enter password'}))
     password2 = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Enter password again'}))
+    city = forms.CharField(widget=forms.TextInput(attrs={'class': 'city-input', 'placeholder': 'Enter your city'}))
 
     class Meta:
         model = user
